@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Detect CapsLock</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form class="form"> 
+    <div class="form-group">
+        <input type="text" id="input" placeholder="Enter Your Password">
+        <p id="text">&crarr; caps lock is on.</p>
+    </div>
+</form>
+
+<script>
+ var input = document.getElementById('input');
+var text = document.getElementById('text');
+
+    input.addEventListener("keyup", function(event)
+    {
+        if(event.getModifierState('CapsLock')){
+            text.style.visibility = "visible";
+        }else{
+            text.style.visibility = "hidden";
+                
+
+        }
+    });
+
+</script>
+
+</body>
+</html>
